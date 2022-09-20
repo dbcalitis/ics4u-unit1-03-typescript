@@ -47,10 +47,9 @@ if (foodTime !== 0) {
   } else {
     const microwaveTime = amountFoodInt * foodTime
     console.log(
-      `The total cook time is ${
-        Math.floor(microwaveTime / MINUTE)} minutes and ${
-        microwaveTime % MINUTE
-      } seconds.`
+      `The total cook time is ${Math.floor(
+        microwaveTime / MINUTE
+      )} minutes and ${microwaveTime % MINUTE} seconds.`
     )
   }
 }
