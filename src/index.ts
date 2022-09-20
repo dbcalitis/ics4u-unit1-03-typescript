@@ -10,7 +10,13 @@ import promptSync from 'prompt-sync'
 
 const prompt = promptSync()
 
-// T
+// Constants
+const SUB_TIME = 60
+const PIZZA_TIME = 45
+const SOUP_TIME = 105
+const MINUTE = 60
+
+// Microwave time
 let foodTime = 0
 
 // Input object's mass
@@ -18,13 +24,13 @@ const food = prompt('Are you heating sub, pizza, or soup?: ')
 
 switch (food) {
   case 'sub':
-    foodTime = 60
+    foodTime = SUB_TIME
     break
   case 'pizza':
-    foodTime = 45
+    foodTime = PIZZA_TIME
     break
   case 'soup':
-    foodTime = 105
+    foodTime = SOUP_TIME
     break
   default:
     console.log('Invalid Input.')
@@ -41,8 +47,9 @@ if (foodTime !== 0) {
   } else {
     const microwaveTime = amountFoodInt * foodTime
     console.log(
-      `The total cook time is ${Math.floor(microwaveTime / 60)} minutes and ${
-        microwaveTime % 60
+      `The total cook time is ${
+        Math.floor(microwaveTime / MINUTE)} minutes and ${
+        microwaveTime % MINUTE
       } seconds.`
     )
   }
