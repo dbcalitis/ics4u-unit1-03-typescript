@@ -31,7 +31,9 @@ switch (food) {
 }
 
 if (foodTime !== 0) {
-  const amountFood = prompt(`How many ${String(food)}(s) are you cooking? (max:3): `)
+  const amountFood = prompt(
+    `How many ${String(food)}(s) are you cooking? (max:3): `
+  )
   const amountFoodInt = parseInt(amountFood)
 
   if (isNaN(amountFoodInt) || amountFoodInt > 3) {
